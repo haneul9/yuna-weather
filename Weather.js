@@ -8,62 +8,62 @@ const weatherOptions = {
     Thunderstorm: {
         iconName: "weather-lightning",
         gradient: ["#373B44", "#4286f4"],
-        title: "Thunderstorm in the house",
-        subtitle: "Actually, outside of the house"
+        title: "천둥번개",
+        subtitle: "번쩍번쩍"
     },
     Drizzle: {
         iconName: "weather-hail",
         gradient: ["#89F7FE", "#66A6FF"],
-        title: "Drizzle",
-        subtitle: "Is like rain, but gay 🏳️‍🌈"
+        title: "이슬비",
+        subtitle: "우산이 필요해!"
     },
     Rain: {
         iconName: "weather-rainy",
         gradient: ["#00C6FB", "#005BEA"],
-        title: "Raining like a MF",
-        subtitle: "For more info look outside"
+        title: "비",
+        subtitle: "우산 챙겨가!"
     },
     Snow: {
         iconName: "weather-snowy",
         gradient: ["#7DE2FC", "#B9B6E5"],
-        title: "Cold as balls",
-        subtitle: "Do you want to build a snowman? Fuck no."
+        title: "눈",
+        subtitle: "눈사람 만들까?"
     },
     Clear: {
         iconName: "weather-sunny",
         gradient: ["#FF7300", "#FEF253"],
-        title: "Sunny as fuck",
-        subtitle: "Go get your ass burnt"
+        title: "맑음",
+        subtitle: "소풍가기 좋은 날씨"
     },
     Clouds: {
         iconName: "weather-cloudy",
         gradient: ["#D7D2CC", "#304352"],
-        title: "Clouds",
-        subtitle: "I know, fucking boring"
+        title: "구름",
+        subtitle: "해가 안보여"
     },
     Mist: {
         iconName: "weather-hail",
         gradient: ["#4DA0B0", "#D39D38"],
-        title: "Mist!",
-        subtitle: "It's like you have no glasses on."
+        title: "안개",
+        subtitle: "앞이 잘 안보여"
     },
     Dust: {
         iconName: "weather-hail",
         gradient: ["#4DA0B0", "#D39D38"],
-        title: "Dusty",
-        subtitle: "Thanks a lot China 🖕🏻"
+        title: "먼지",
+        subtitle: "숨쉬기 힘들다!"
     },
     Haze: {
         iconName: "weather-hail",
         gradient: ["#4DA0B0", "#D39D38"],
-        title: "Haze",
-        subtitle: "Just don't go outside."
+        title: "안개",
+        subtitle: "앞이 잘 안보여"
     },
     Default: {
         iconName: "weather-sunset",
         gradient: ["#4DA0B0", "#D39D38"],
-        title: "",
-        subtitle: ""
+        title: "에러",
+        subtitle: "아빠에게 물어봐"
     }
 };
 
@@ -92,10 +92,20 @@ export default function Weather({ temp, condition }) {
     );
 }
 
-Weather.PropTypes = {
+Weather.propTypes = {
     temp: PropTypes.number.isRequired,
-    condition: PropTypes.oneOf(["Thunderstorm", "Drizzle", "Rain", "Snow", "Clear", "Clouds", "Haze", "Mist", "Dust"])
-        .isRequired
+    condition: PropTypes.oneOf([
+        "Thunderstorm",
+        "Drizzle",
+        "Rain",
+        "Snow",
+        "Clear",
+        "Clouds",
+        "Haze",
+        "Mist",
+        "Dust",
+        "Default"
+    ]).isRequired
 };
 
 const styles = StyleSheet.create({
