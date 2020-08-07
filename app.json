@@ -21,6 +21,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Weather App by ReactNative & Expo",
+    "githubUrl": "https://github.com/haneul9/yuna-weather"
   }
 }
